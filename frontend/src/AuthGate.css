@@ -1,0 +1,511 @@
+
+/* =========================================
+   MarketFlow Premium Login
+   ========================================= */
+
+.mf-login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background: #eef2f9;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.mf-login-shell {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: 1100px;
+  min-height: 680px;
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 70px rgba(20, 35, 70, 0.13);
+}
+
+/* =========================================
+   Branding Panel
+   ========================================= */
+
+.mf-brand-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #101b36, #1d3471);
+  color: #ffffff;
+}
+
+.mf-brand-heading,
+.mf-mobile-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.mf-brand-logo,
+.mf-admin-brand-icon,
+.mf-loading-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #3975ff, #8970f8);
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.mf-brand-content {
+  position: relative;
+  z-index: 1;
+}
+
+.mf-brand-eyebrow,
+.mf-form-eyebrow {
+  color: #99b4ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+/* FIXED: Heading now appears white */
+
+.mf-brand-content h1 {
+  margin: 20px 0;
+  font-size: clamp(32px, 3.4vw, 46px);
+  line-height: 1.18;
+  letter-spacing: -1.5px;
+  color: #ffffff;
+}
+
+.mf-brand-content h1 span {
+  color: #9ab3ff;
+}
+
+.mf-brand-content > p {
+  color: #bfcae5;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.mf-brand-features {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.mf-brand-feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.mf-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: rgba(110, 150, 255, 0.2);
+  color: #a6bdff;
+}
+
+.mf-brand-footer {
+  position: relative;
+  z-index: 1;
+  color: #9daed4;
+  font-size: 11px;
+}
+
+.mf-brand-orb {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(103, 115, 255, 0.23),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.mf-brand-orb-one {
+  top: 80px;
+  right: -170px;
+}
+
+.mf-brand-orb-two {
+  bottom: -150px;
+  left: -170px;
+}
+
+/* =========================================
+   Login Form
+   ========================================= */
+
+.mf-form-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 65px 48px 28px;
+  background: #ffffff;
+}
+
+.mf-form-content {
+  width: 100%;
+  max-width: 360px;
+  margin: auto 0;
+}
+
+.mf-mobile-brand {
+  display: none;
+}
+
+.mf-welcome-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 24px;
+  border-radius: 14px;
+  background: #edf2ff;
+  color: #4169ee;
+  font-size: 25px;
+}
+
+.mf-form-eyebrow {
+  color: #4772ee;
+}
+
+.mf-form-heading {
+  margin-bottom: 32px;
+}
+
+.mf-form-heading h2 {
+  margin: 10px 0;
+  color: #172747;
+  font-size: 33px;
+  letter-spacing: -1px;
+}
+
+.mf-form-heading p {
+  color: #8290a7;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.mf-field {
+  margin-bottom: 22px;
+}
+
+.mf-field label {
+  display: block;
+  margin-bottom: 9px;
+  color: #344460;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.mf-field input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  border: 1px solid #dce4f0;
+  border-radius: 11px;
+  outline: none;
+  background: #fbfcff;
+  color: #172747;
+  font-size: 13px;
+}
+
+.mf-field input:focus {
+  border-color: #4779f7;
+  box-shadow: 0 0 0 4px rgba(71, 121, 247, 0.1);
+}
+
+.mf-password-wrapper {
+  position: relative;
+}
+
+.mf-password-wrapper input {
+  padding-right: 80px;
+}
+
+.mf-password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  padding: 8px;
+  border: none;
+  background: transparent;
+  color: #5274c6;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mf-login-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 52px;
+  padding: 12px;
+  border: none;
+  border-radius: 11px;
+  background: linear-gradient(110deg, #3269f5, #596ef7);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mf-login-button:hover:not(:disabled) {
+  background: #2855d8;
+}
+
+.mf-login-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.mf-login-error,
+.mf-session-error {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 12px;
+}
+
+.mf-form-security,
+.mf-form-footer {
+  color: #8795ad;
+  font-size: 11px;
+  text-align: center;
+}
+
+.mf-form-security {
+  margin-top: 28px;
+}
+
+.mf-form-footer {
+  margin-top: 35px;
+}
+
+/* =========================================
+   Administrator Header
+   ========================================= */
+
+.mf-authenticated {
+  min-height: 100vh;
+}
+
+.mf-admin-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 30px;
+  background: #ffffff;
+  border-bottom: 1px solid #e7ecf5;
+}
+
+.mf-admin-bar-brand,
+.mf-admin-actions,
+.mf-admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mf-admin-bar-brand {
+  color: #172747;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.mf-admin-brand-icon {
+  width: 32px;
+  height: 32px;
+  font-size: 17px;
+}
+
+.mf-admin-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #eaf0ff;
+  color: #3269f5;
+  font-weight: 800;
+}
+
+.mf-admin-details {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 12px;
+}
+
+.mf-admin-details strong {
+  color: #172747;
+}
+
+.mf-admin-details small {
+  color: #8290a7;
+  font-size: 11px;
+}
+
+.mf-logout-button {
+  padding: 10px 16px;
+  border: 1px solid #dce4f0;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #344460;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mf-logout-button:hover:not(:disabled) {
+  background: #f5f7fc;
+}
+
+.mf-logout-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   Loading Screen
+   ========================================= */
+
+.mf-loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f5f7fc;
+  color: #172747;
+}
+
+.mf-loading-screen h2 {
+  margin-bottom: 6px;
+}
+
+.mf-loading-screen p {
+  color: #8290a7;
+  font-size: 13px;
+}
+
+.mf-spinner,
+.mf-button-spinner {
+  width: 22px;
+  height: 22px;
+  margin-top: 20px;
+  border: 3px solid #dce6ff;
+  border-top-color: #4779f7;
+  border-radius: 50%;
+  animation: mf-spin 0.8s linear infinite;
+}
+
+.mf-button-spinner {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+}
+
+@keyframes mf-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   Responsive Design
+   ========================================= */
+
+@media (max-width: 900px) {
+  .mf-login-shell {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+  }
+
+  .mf-brand-panel {
+    display: none;
+  }
+
+  .mf-form-panel {
+    min-height: 600px;
+    padding: 45px 32px 25px;
+  }
+
+  .mf-mobile-brand {
+    display: flex;
+    margin-bottom: 35px;
+    color: #172747;
+  }
+}
+
+@media (max-width: 520px) {
+  .mf-login-page {
+    padding: 0;
+  }
+
+  .mf-login-shell {
+    min-height: 100vh;
+    border-radius: 0;
+  }
+
+  .mf-form-panel {
+    padding: 35px 22px;
+  }
+
+  .mf-form-heading h2 {
+    font-size: 29px;
+  }
+
+  .mf-admin-bar {
+    padding: 12px 15px;
+  }
+
+  .mf-admin-bar-brand span:last-child,
+  .mf-admin-details {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mf-spinner,
+  .mf-button-spinner {
+    animation: none;
+  }
+}

@@ -1,0 +1,53 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+!.env.sample
+*.secret
+*.secrets
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Local configuration
+application-local.properties
+application-local.yml
+application-local.yaml
+application-secrets.properties
+
+# Backend build files
+**/target/
+**/build/
+
+# Frontend dependencies and builds
+**/node_modules/
+**/dist/
+**/dist-ssr/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# IDE and operating system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local database files and backups
+*.sql.bak
+*.dump
+*.backup
+# Local debugging files
+backend/backend-error.txt
+# Old frontend archives and backups
+frontend/marketing-frontend.zip
+frontend/marketing-frontend/
+frontend/src/App.backup.txt
+frontend/src/App.before-google-ads.txt
+# Accidental empty file
+frontend/cd
+# Old backend repository backup
+backend/repository-backup/
